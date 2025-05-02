@@ -8,52 +8,76 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
+      background-color: #fffaf0;
       color: #333;
     }
     header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       background-color: #fff;
       padding: 20px 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      justify-content: space-between;
     }
     header img {
-      height: 100px; /* Aumenté el tamaño del logo */
-      width: auto;  /* Mantiene la proporción horizontal */
+      height: 120px;
+      margin-right: 20px;
     }
     h1 {
       margin: 0;
       font-size: 2.5em;
+      letter-spacing: 2px;
       color: #222;
-      letter-spacing: 3px;
-      font-weight: bold;
     }
-    .cta-button {
-      background-color: #ffbb33;
-      padding: 10px 20px;
-      border-radius: 5px;
-      color: white;
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+    .social-icons a {
+      text-decoration: none;
+    }
+    .social-icons img {
+      width: 30px;
+      height: auto;
+    }
+    .banner {
+      background: linear-gradient(90deg, goldenrod, #fff8dc);
+      text-align: center;
+      padding: 60px 20px;
+      margin: 0;
+      border-bottom: 2px solid #e0c07c;
+    }
+    .banner h2 {
+      font-size: 3.5em;
+      margin: 0 0 15px;
+      color: #333;
+      text-shadow: 1px 1px 0 #fff;
+    }
+    .banner p {
+      font-size: 1.3em;
+      margin-bottom: 25px;
+      color: #444;
+    }
+    .boton-catalogo {
+      padding: 12px 25px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 10px;
-      display: inline-block;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
-    .cta-button:hover {
-      background-color: #ff9c00;
+    .boton-catalogo:hover {
+      background-color: goldenrod;
+      color: #000;
     }
     section {
-      max-width: 1800px;
-      margin: 40px auto;
+      max-width: 1300px;
+      margin: auto;
       padding: 40px 20px;
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
     }
     h2 {
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin-top: 50px;
       border-bottom: 2px solid #ddd;
       padding-bottom: 10px;
@@ -61,77 +85,57 @@
     }
     .precios {
       margin-bottom: 25px;
-      font-size: 1.4em;
+      font-size: 1.2em;
       color: #444;
       font-weight: bold;
     }
     h3 {
       margin: 30px 0 15px;
-      font-size: 2em;
+      font-size: 1.6em;
       color: #222;
       border-left: 4px solid goldenrod;
-      padding-left: 15px;
+      padding-left: 10px;
     }
     .galeria {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+      gap: 15px;
     }
     .galeria img {
-      width: 280px;
+      width: 250px;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
     .galeria img:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     }
     .producto {
       text-align: center;
-      width: 280px;
+      width: 250px;
     }
     .producto p {
       margin: 8px 0 0;
       font-weight: bold;
-      font-size: 1.1em;
-      color: #222;
+      font-size: 1em;
     }
     footer {
-      background-color: #222;
+      background-color: #fff;
       text-align: center;
-      padding: 30px 10px;
+      padding: 25px 10px;
       margin-top: 50px;
       font-size: 1.05em;
-      color: #fff;
-      border-top: 3px solid #444;
+      color: #555;
+      border-top: 1px solid #ddd;
     }
     footer img {
       vertical-align: middle;
-      width: 25px;
+      width: 20px;
       margin-right: 8px;
     }
     .footer-line {
       margin: 10px 0;
-    }
-    /* Fondo llamativo */
-    .background-container {
-      background-image: url('https://via.placeholder.com/1920x800'); /* Cambia esta URL con una imagen real */
-      background-size: cover;
-      background-position: center;
-      padding: 100px 0;
-      color: white;
-      text-align: center;
-      border-radius: 10px;
-    }
-    .background-container h2 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-    .background-container p {
-      font-size: 1.5em;
     }
   </style>
 </head>
@@ -139,11 +143,26 @@
 
   <header>
     <img src="logo-dorado-sinfondo.png" alt="Logo TLMULTIVENTAS">
-    <h1>TLMULTIVENTAS</h1>
-    <a href="https://www.instagram.com/tlmultiventas" class="cta-button">¡Síguenos en Instagram!</a>
+    <div>
+      <h1>TLMULTIVENTAS</h1>
+    </div>
+    <div class="social-icons">
+      <a href="https://wa.me/1150474155" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      </a>
+      <a href="https://www.instagram.com/tlmultiventas/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+    </div>
   </header>
 
-  <section>
+  <div class="banner">
+    <h2>📦 CATÁLOGO DESTACADO</h2>
+    <p>Descubrí nuestros productos más destacados y más vendidos</p>
+    <a href="#catalogo" class="boton-catalogo">Ver catálogo</a>
+  </div>
+
+  <section id="catalogo">
 
     <h2>Otros productos</h2>
     <div class="galeria">
@@ -157,7 +176,7 @@
       </div>
       <div class="producto">
         <img src="termos.jpeg" alt="Termo River">
-        <p>Termos River-Boca<br>$30000</p>
+        <p>Termo River-Boca<br>$30000</p>
       </div>
       <div class="producto">
         <img src="medias.jpeg" alt="Medias antideslizantes">
